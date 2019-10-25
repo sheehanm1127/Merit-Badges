@@ -24,12 +24,15 @@ while (again == true) {
 				alert("Too high!");
 			}
 			else if (guess == answer) {
-				alert(gameStats(turns));
+				gameStats(turns);
 			}
 		}
 		else alert("Invalid guess, try again.");
-	}
-	again = newGame();
+		}
+		if (guess == "q"){
+			break;
+		}
+		else {again = newGame()}
 }
 
 /* Function validate
@@ -68,7 +71,7 @@ function gameStats(turns) {
 
 function newGame() {
 	again = prompt("Would you like to play again? y = yes");
-	if (again = "y") {
+	if (again == "y") {
 		return true;
 	}
 	else {
