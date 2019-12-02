@@ -14,7 +14,7 @@ while (again == true) {
 	count = 0;	
 	turn = 0;	
 	next = games%2;	
-	while (count < 21){		
+	while (count < 21) {		
 		if (next == 0) {
 			count = cpuTurn(count);
 		}		
@@ -60,7 +60,7 @@ function userTurn(count) {
 	var goodTurn = false;	
 	var turn = 0;	
 	while (goodTurn == false) {	
-		turn = prompt("Enter 1, 2 or 3");		
+		turn = prompt("Enter 1, 2, or 3");		
 		if (turn > 0 && turn < 4 && Math.floor(turn) == turn) goodTurn = true;		
 		else {
 			alert("Invalid count. Enter 1,2 or 3.");
@@ -78,7 +78,7 @@ function nextSwitch(next)
 * Return int 
 */
 
-function nextSwitch(next){	
+function nextSwitch(next) {	
 	if (next == 0) {
 		next = 1;
 	}	
@@ -95,7 +95,7 @@ function declareWinner(next)
 * Return none
 */
 
-function declareWinner(next){	
+function declareWinner(next) {	
 	if (next == 0) {
 		winner = "You";
 	}	
