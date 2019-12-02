@@ -63,7 +63,7 @@ function userTurn(count) {
 		turn = prompt("Enter 1, 2, or 3");		
 		if (turn > 0 && turn < 4 && Math.floor(turn) == turn) goodTurn = true;		
 		else {
-			alert("Invalid count. Enter 1,2 or 3.");
+			alert("Invalid count. Enter 1, 2, or 3.");
 		}	
 	}	
 	count += Number(turn);	
