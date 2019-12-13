@@ -1,6 +1,6 @@
 /* 
- * Nim Simple - Marshall
- ***NOT COMPLETE***
+ * Nim Trainer(/Simple) - Marshall
+ * WORKING
  * Note: Global variables have been passed as parameters.  This is not best practice, but helpful for tracking.
  */
 
@@ -20,15 +20,15 @@ while (again == true) {
 	while (count < 21){
 		if (next == 0) {
 			if (gameType == "simple") {
-				cpuTurn(count);
+				count = cpuTurn(count);
 			}
 			else {
-				cpuTrainer(count);
+				count = cpuTrainer(count);
 			}
 		}
 		else {
 			count = userTurn(count);
-			alert("Count is now "+count);
+			
 		}
 		if (count < 21) next=nextSwitch(next);
 	}
@@ -53,7 +53,7 @@ function cpuTurn(count){
 		if (turn == 1 || turn > 1 && count+turn < 21) goodTurn = true;
 	}
 	alert("CPU counts "+turn);
-	count += turn;
+	count += parseInt(turn);
 	alert("Count is now " + count);
 	return count;
 }
@@ -70,7 +70,7 @@ function cpuTrainer(count) {
 		turn = Math.floor(Math.random()*3)+1;
 	}
 	alert("CPU counts " + turn);
-	count+=turn;
+	count += parseInt(turn);
 	alert("Count is now " + count);
 	return count;
 }
@@ -85,6 +85,7 @@ function userTurn(count) {
 		else alert("Invalid input. Enter 1,2 or 3.");
 	}
 	count += parseInt(turn);
+	alert("Count is now " + count);
 	return count;
 }
 
